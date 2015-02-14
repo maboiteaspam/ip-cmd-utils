@@ -28,7 +28,6 @@ program.command('show')
     cmdUtils.logStreamLike(streamProcess )
       .on('parsed', function(results){
 
-        var filters = [];
         // apply filters
         if(command.filter){
           results = cmdUtils.filterResults(command.filter.split(','), results);
@@ -39,10 +38,13 @@ program.command('show')
           results = cmdUtils.selectResults(command.only, results);
         }
 
+        // pretty print
         if(program.prettyPrint)
           results = JSON.stringify(results, null, 4);
         else
           results = JSON.stringify(results);
+
+        // output.
         if(!program.quiet){
           console.log(results);
         }
