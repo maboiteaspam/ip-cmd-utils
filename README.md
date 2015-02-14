@@ -4,7 +4,7 @@ Should enable you to add/del ip on your local computer without a pain.
 
 It provides wrapper commands around both ```ifconfig``` and ```ip```.
 
-Maybe it is be possible to add support for both macos and windows. 
+Maybe it is possible to add support for both macos and windows. 
 
 ### you may need to use su
 
@@ -13,7 +13,11 @@ The bin will let you know when it is required.
 
 ### Beware Beware Beware Beware
 
-It is not production ready. Feel free to improve if you feel to.
+It is not production ready at all. 
+
+Feel free to improve if you feel to. 
+
+I intent to use that to dynamically build network on my local computer.
 
 
 # Usage
