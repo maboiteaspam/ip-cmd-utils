@@ -1,6 +1,6 @@
 # IP cmd utils
 
-Should enable you to add/del ip on your local computer without a pain.
+Should enable you to search/find/add/del ip on your local computer without a pain.
 
 It provides wrapper commands around both ```ifconfig``` and ```ip```.
 
