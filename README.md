@@ -62,7 +62,7 @@ ip-cmd-utils add <ipName> <mask> <interface>
 
 Del ip
 ```
-ip-cmd-utils add <ipName> <mask> <interface>
+ip-cmd-utils del <ipName> <mask> <interface>
 [empty response is good]
 ```
 
