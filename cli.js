@@ -29,64 +29,14 @@ program.command('show')
       .on('parsed', function(results){
 
         var filters = [];
-        // load filters
-        if(command.filter){
-          filters = command.filter.split(',');
-        }
         // apply filters
-        _.each(filters,function(filter){
-          if( filter.match(/^lan$/) ){
-            results = _.where(results, {isEther: true});
-          }
-          if( filter.match(/^loopback|lo$/) ){
-            results = _.where(results, {isLoop: true});
-          }
-          if( filter.match(/^ipv(4|6)$/) ){
-            results = _.filter(results, function(settings){
-              settings.ips = _.filter(settings.ips, function(ipSettings){
-                return ipSettings.type.match(filter)
-              });
-              return !!settings.ips.length;
-            });
-          }
-        });
-        var selector = false;
-        // load selectors
-        if(command.only){
-          selector = command.only;
+        if(command.filter){
+          results = cmdUtils.filterResults(command.filter.split(','), results);
         }
+
         // apply selectors
-        if(selector){
-          if(selector.match(/ip/)){
-            // get ips only
-            var ips = [];
-            _.each(results, function(settings){
-              ips = ips.concat(settings.ips);
-            });
-            results = ips;
-            console.error(selector)
-            // get ip value only
-            if(selector.match(/name/)){
-              ips = [];
-              _.each(results, function(settings){
-                ips = ips.concat(settings.ip);
-              });
-              results = ips;
-            }
-          }else if(selector.match(/interface|intf/)){
-            // get interfaces only
-            results = _.each(results, function(settings, name){
-              delete results[name].ips;
-            });
-            // get interfaces value only
-            if(selector.match(/name/)){
-              var intfs = [];
-              _.each(results, function(settings){
-                intfs = intfs.concat(settings.name);
-              });
-              results = intfs;
-            }
-          }
+        if(command.only){
+          results = cmdUtils.selectResults(command.only, results);
         }
 
         if(program.prettyPrint)
