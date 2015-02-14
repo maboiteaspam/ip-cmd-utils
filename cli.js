@@ -12,8 +12,8 @@ program
   .option('-p, --pretty-print', 'Pretty printing');
 
 program.command('show')
-  .option('--filter <items>', 'loopback, lan, ipv4, ipv6')
-  .option('--only <selector>', 'ip ||interface || intf')
+  .option('--filter <items>', 'loopback || lo, lan, ipv4, ipv6')
+  .option('--only <selector>', 'ip ||interface || intf [,name]?')
   .description('Show configuration')
   .action(function(command){
 
