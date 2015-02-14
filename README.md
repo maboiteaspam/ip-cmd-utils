@@ -73,6 +73,18 @@ I intent to use that to dynamically build network on my local computer.
 ```
 
 ```js
+// ip-cmd-utils show -p --only ip
+[
+      {
+        type:'ipvX',
+        ip:'xx.Xx.Xx.xx'
+        // more properties
+      },
+      // more IPs
+]
+```
+
+```js
 // ip-cmd-utils show -p --only ip,name
 [
     "127.0.0.1",
@@ -82,14 +94,10 @@ I intent to use that to dynamically build network on my local computer.
 ```
 
 ```js
-// ip-cmd-utils show -p --only ip
+// ip-cmd-utils show -p --only ip,name --filter ipv6
 [
-      {
-        type:'ipvX',
-        ip:'xx.Xx.Xx.xx'
-        // more properties
-      },
-      // more IPs
+    "::1",
+    // more IPs ? not always.
 ]
 ```
 
