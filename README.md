@@ -51,18 +51,39 @@ I intent to use that to dynamically build network on my local computer.
 
 ```
 
+
+# Output format
+```js
+[
+  {
+    name:'interfaceName like eth0'
+    // more properties
+      ips:[
+      {
+        type:'ipvX',
+        ip:'xx.Xx.Xx.xx'
+        // more properties
+      },
+      // more IPs
+    ]
+  },
+  // more Interfaces
+]
+```
+
+
 # Examples
 
 Show network settings
 ```zsh
 ip-cmd-utils show -p
-... output some JSON, -p will pretty print
+# ... output some JSON, -p will pretty print
 ```
 
 Add ip
 ```zsh
 ip-cmd-utils add <ipName> <mask> <interface>
-[empty response is good]
+# [empty response is good]
 ```
 
 Del ip
@@ -74,34 +95,34 @@ ip-cmd-utils del <ipName> <mask> <interface>
 Auto configure new ip @todo @todo
 ```zsh
 ip-cmd-utils add-ip
-xxx.xxxx.Xxx.Xx
+# xxx.xxxx.Xxx.Xx
 ```
 
 Delete ip automatically and correctly @todo @todo
 ```zsh
 ip-cmd-utils del-ip xxx.xxxx.Xxx.Xx
-[empty response is good]
+# [empty response is good]
 ```
 
 View more information
 ```zsh
 ip-cmd-utils show -v
-...Displays all debug information
+# ...Displays all debug information
 ```
 
 ```zsh
 ip-cmd-utils show -p --filter lan --only ip,name
-...Show only IP names from LAN interfaces
+# ...Show only IP names from LAN interfaces
 ```
 
 ```zsh
 ip-cmd-utils show -p --filter ipv6 --only ip
-...Show only IP settings of ipv6 addresses
+# ...Show only IP settings of ipv6 addresses
 ```
 
 ```zsh
 ip-cmd-utils show -p --filter ipv6 --only intf,name
-...Show only Interfaces names which have ipv6 addresses
+# ...Show only Interfaces names which have ipv6 addresses
 ```
 
 
