@@ -120,7 +120,7 @@ ip-cmd-utils add-ip
 # xxx.xxxx.Xxx.Xx
 ```
 
-Delete ip automatically and correctly @todo @todo
+Delete ip automatically @todo @todo
 ```zsh
 ip-cmd-utils del-ip xxx.xxxx.Xxx.Xx
 # [empty response is good]
