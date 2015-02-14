@@ -151,7 +151,6 @@ var IpCmdUtils = function(prefered){
         ips = ips.concat(settings.ips);
       });
       results = ips;
-      console.error(selector)
       // get ip value only
       if(selector.match(/name/)){
         ips = [];
