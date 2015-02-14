@@ -54,7 +54,7 @@ I intent to use that to dynamically build network on my local computer.
 
 # Output format
 ```js
-# ip-cmd-utils show -p
+// ip-cmd-utils show -p
 [
   {
     name:'interfaceName like eth0'
@@ -73,7 +73,7 @@ I intent to use that to dynamically build network on my local computer.
 ```
 
 ```js
-# ip-cmd-utils show -p --only ip,name
+// ip-cmd-utils show -p --only ip,name
 [
     "127.0.0.1",
     "::1",
@@ -82,7 +82,7 @@ I intent to use that to dynamically build network on my local computer.
 ```
 
 ```js
-# ip-cmd-utils show -p --only ip
+// ip-cmd-utils show -p --only ip
 [
       {
         type:'ipvX',
