@@ -59,7 +59,7 @@ I intent to use that to dynamically build network on my local computer.
   {
     name:'interfaceName like eth0'
     // more properties
-      ips:[
+    ips:[
       {
         type:'ipvX',
         ip:'xx.Xx.Xx.xx'
