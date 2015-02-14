@@ -8,7 +8,7 @@ Maybe it is possible to add support for both macos and windows.
 
 ### you may need to use su
 
-The bin will let you know when it is required.
+The bin will let you know when that is required.
 
 
 ### Beware Beware Beware Beware
@@ -29,10 +29,10 @@ I intent to use that to dynamically build network on my local computer.
   Commands:
 
     show [options]               Show configuration
-              --filter    items like loopback || lo, lan, ipv4, ipv6
-              --only      displays only one of ip, interface, intf
-                          use ip,name to display only ip's name.
-                          use intf,name to display only ip's name.
+              --filter    items like loopback || lo, lan, ipv4 || ipv6
+              --only      displays only one of ip, interface || intf
+                          use ip,name to display only ip\'s names.
+                          use intf,name to display only interface\'s names.
               
     add <ip> <mask> <interface>  add IP address
     del <ip> <mask> <interface>  del IP address
