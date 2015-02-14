@@ -20,6 +20,13 @@ Feel free to improve if you feel to.
 I intent to use that to dynamically build network on my local computer.
 
 
+# Install
+
+```
+npm i -g maboiteaspam/ip-cmd-utils
+```
+
+
 # Usage
 
 ```zsh
