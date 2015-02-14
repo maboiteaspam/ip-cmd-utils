@@ -61,10 +61,14 @@ program.command('add <ip> <mask> <interface>')
     }
 
     var cmdUtils = new IpCmdUtils(program.prefer || false);
+    // load capabilities
     cmdUtils.addCapability('ip');
     cmdUtils.addCapability('ifconfig');
+    // add new ip
     var streamProcess = cmdUtils.addIp(ip, mask, intf);
+    // log process output
     cmdUtils.logStreamLike(streamProcess )
+      // output result.
       .on('done', function(success){
       if(!success){
         console.log('failed');
@@ -81,10 +85,14 @@ program.command('del <ip> <mask> <interface>')
     }
 
     var cmdUtils = new IpCmdUtils(program.prefer || false);
+    // load capabilities
     cmdUtils.addCapability('ip');
     cmdUtils.addCapability('ifconfig');
+    // rem ip
     var streamProcess = cmdUtils.removeIp(ip, mask, intf);
+    // log process output
     cmdUtils.logStreamLike(streamProcess )
+      // output result.
       .on('done', function(success){
         if(!success){
           console.log('failed');
